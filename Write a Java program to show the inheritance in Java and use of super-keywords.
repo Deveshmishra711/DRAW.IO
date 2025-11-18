@@ -1,0 +1,41 @@
+// Parent class
+class Animal {
+    String name = "Animal";
+
+    // Parent class constructor
+    Animal() {
+        System.out.println("Animal constructor called");
+    }
+
+    // Parent class method
+    void display() {
+        System.out.println("This is an Animal");
+    }
+}
+
+// Child class
+class Dog extends Animal {
+    String name = "Dog";
+
+    // Child class constructor
+    Dog() {
+        super();  // calling parent constructor
+        System.out.println("Dog constructor called");
+    }
+
+    // Child class method
+    void show() {
+        System.out.println("Child class name: " + name);
+        System.out.println("Parent class name using super: " + super.name);
+        
+        super.display(); // calling parent class method using super
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.show();
+    }
+}
