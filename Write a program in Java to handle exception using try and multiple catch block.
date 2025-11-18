@@ -1,0 +1,22 @@
+public class MultipleCatchExample {
+    public static void main(String[] args) {
+        try {
+            int a = 10, b = 0;
+            int result = a / b;   // causes ArithmeticException
+            
+            int arr[] = {1, 2, 3};
+            System.out.println(arr[5]);  // causes ArrayIndexOutOfBoundsException
+
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Cannot divide by zero!");
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: Array index out of range!");
+
+        } catch (Exception e) {
+            System.out.println("General Exception Occurred.");
+        }
+
+        System.out.println("Program continues normally...");
+    }
+}
